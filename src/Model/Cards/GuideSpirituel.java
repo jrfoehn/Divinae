@@ -1,4 +1,7 @@
-package Model.Cards;
+package model.cards;
+
+import model.components.Dogme;
+import model.components.Origine;
 
 import java.util.ArrayList;
 
@@ -9,5 +12,10 @@ public class GuideSpirituel extends CarteAction {
 
     private int nbCroyantMax;
     private ArrayList<Croyant> nbCroyant;
+
+    public GuideSpirituel(String nom, Origine origine, Dogme dogme1, Dogme dogme2, int nbCroyantMax, String capaciteSpeciale, int idCarte, int idCapaciteSpeciale) {
+        super(nom, origine, capaciteSpeciale, idCapaciteSpeciale);
+
+    }
 
 }

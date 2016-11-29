@@ -1,4 +1,4 @@
-package Model.Cards;
+package model.cards;
 
 /**
  * Created by jrfoehn on 11/29/16.

@@ -1,6 +1,6 @@
-package Model.Components;
+package model.components;
 
-import Model.Cards.CarteAction;
+import model.cards.CarteAction;
 
 import java.util.ArrayList;
 /**

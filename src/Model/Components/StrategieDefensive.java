@@ -1,6 +1,6 @@
-package Model.Components;
+package model.components;
 
-import Tools.Strategy;
+import tools.Strategy;
 
 /**
  * Created by jrfoehn on 11/29/16.

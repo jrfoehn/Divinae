@@ -1,6 +1,6 @@
-package Tools;
+package tools;
 
-import Model.Cards.CarteAction;
+import model.cards.CarteAction;
 
 /**
  * Created by jrfoehn on 11/29/16.

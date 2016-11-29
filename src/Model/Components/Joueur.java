@@ -1,6 +1,6 @@
-package Model.Components;
+package model.components;
 
-import Model.Cards.Divinite;
+import model.cards.Divinite;
 
 /**
  * Created by jrfoehn on 11/29/16.
