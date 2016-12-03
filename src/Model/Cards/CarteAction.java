@@ -5,11 +5,12 @@ import model.components.Origine;
 /**
  * Created by jrfoehn on 11/29/16.
  */
-public abstract class CarteAction extends Carte{
+public class CarteAction extends Carte {
+
     protected int idCapaciteSpeciale;
     protected int idCarte;
 
-    public CarteAction(String nom, Origine origine){
+    public CarteAction(String nom, Origine origine, int idCapaciteSpeciale, int idCarte) {
         super(nom, origine);
     }
 
@@ -27,4 +28,5 @@ public abstract class CarteAction extends Carte{
     public int getIdCapaciteSpeciale() {
         return this.idCapaciteSpeciale;
     }
+
 }

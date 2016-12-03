@@ -8,8 +8,8 @@ import java.util.ArrayList;
 /**
  * Created by jrfoehn on 11/29/16.
  */
-public abstract class Carte{
-    protected Origine origine;
+public class Carte{
+    public Origine origine;
     protected ArrayList<Dogme> listeDogmes;
     protected String nom;
     protected String capaciteSpeciale;

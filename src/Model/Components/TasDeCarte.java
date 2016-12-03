@@ -6,9 +6,18 @@ import java.util.ArrayList;
 /**
  * Created by jrfoehn on 11/29/16.
  */
-public class TasDeCarte {
+public abstract class TasDeCarte {
 
-    protected int nbCarte;
-    protected ArrayList<CarteAction> cartes;
+    protected ArrayList<CarteAction> listeCartes;
+    protected boolean estVide;
+
+    public TasDeCarte() {
+        this.listeCartes = new ArrayList<CarteAction>();
+        this.estVide = false;
+    }
+
+    public CarteAction choisirCarte(int i) {
+        return this.listeCartes.get(i);
+    }
 
 }
