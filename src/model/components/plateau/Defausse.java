@@ -1,11 +1,12 @@
-package model.components;
+package model.components.plateau;
 
 import model.cards.CarteAction;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
- * Created by jrfoehn on 12/1/16.
+ * Défausse commune
  */
 public class Defausse extends TasDeCarte {
 
@@ -26,7 +27,14 @@ public class Defausse extends TasDeCarte {
         this.listeCartes.add(carte);
     }
 
-    public void transfererPioche(Pioche carte) {
-//        TODO transferer les cartes de la défausse vers la pioche quand cette dernière est vide.
+    public void defausserMultiple(ArrayList<CarteAction> carteActions) {
+        this.listeCartes.addAll(carteActions);
+    }
+
+    public void transfererPioche() {
+        if (Pioche.getInstance().getCartes().isEmpty()) {
+            Collections.shuffle(this.listeCartes);
+            Pioche.getInstance().getCartes().addAll(this.listeCartes);
+        }
     }
 }

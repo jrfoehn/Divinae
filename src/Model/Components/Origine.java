@@ -3,7 +3,7 @@ package model.components;
 
 
 /**
- * Created by jrfoehn on 11/29/16.
+ * Enumération des origines
  */
 public enum Origine {
 
@@ -11,7 +11,7 @@ public enum Origine {
     Nuit,
     Aube,
     Crepuscule,
-    Néant,
+    Neant,
     Aucune
 
 }

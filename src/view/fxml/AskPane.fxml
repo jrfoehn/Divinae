@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="body" alignment="TOP_CENTER" prefHeight="392.0" prefWidth="168.0" stylesheets="@../css/askPane.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AskController">
+   <children>
+      <Label prefHeight="55.0" prefWidth="151.0" text="Choisissez votre classe">
+         <VBox.margin>
+            <Insets bottom="80.0" />
+         </VBox.margin>
+      </Label>
+      <Button mnemonicParsing="false" onMouseClicked="#choix1" text="ISBS1" />
+      <Button mnemonicParsing="false" onMouseClicked="#choix2" text="ISBS2" />
+      <Button mnemonicParsing="false" onMouseClicked="#choix3" text="ISBS3" />
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</VBox>

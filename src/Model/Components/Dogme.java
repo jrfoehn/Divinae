@@ -1,7 +1,7 @@
 package model.components;
 
 /**
- * Created by jrfoehn on 11/29/16.
+ * Enumeration des dogmes possibles
  */
 public enum Dogme {
 
@@ -9,6 +9,6 @@ public enum Dogme {
     Chaos,
     Symbole,
     Mystique,
-    Humain;
+    Humain
 
 }

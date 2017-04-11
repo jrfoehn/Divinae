@@ -6,21 +6,50 @@ import model.components.Origine;
 import java.util.ArrayList;
 
 /**
- * Created by jrfoehn on 11/29/16.
+ * Classe de base
  */
+
 public class Carte{
     public Origine origine;
-    protected ArrayList<Dogme> listeDogmes;
+    public ArrayList<Dogme> listeDogmes;
     protected String nom;
     protected String capaciteSpeciale;
+    protected TypeCarte typeCarte;
 
-    public Carte(String nom, Origine origine){
+    /**
+     * Constructeur des cartes actions
+     * @param nom String
+     * @param origine Origine
+     * @param typeCarte TypeCarte
+     */
+    public Carte(String nom, Origine origine, TypeCarte typeCarte){
         this.nom = nom;
         this.origine = origine;
         this.listeDogmes = new ArrayList<Dogme>();
+        this.typeCarte = typeCarte;
+    }
+
+    /**
+     * Retourne l'origine de la carte
+     * @return Origine
+     */
+    public Origine getOrigine() {
+        return origine;
+    }
+
+    /**
+     * Retourne le type de carte (Apocalypse, Croyant, Deus Ex, Divinite, Guide Spirituel)
+     * @return TypeCarte
+     */
+    public TypeCarte getTypeCarte() {
+        return typeCarte;
+    }
+
+    public void setTypeCarte(TypeCarte typeCarte) {
+        this.typeCarte = typeCarte;
     }
 
     public String toString(){
-        return "Nom : " + this.nom + " Origine : " + this.origine;
+        return "[TYPE] '" + this.typeCarte + "' [NOM] '" + this.nom + "' [ORIGINE] '" + this.origine + "'";
     }
 }

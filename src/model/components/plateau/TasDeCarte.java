@@ -1,10 +1,10 @@
-package model.components;
+package model.components.plateau;
 
 import model.cards.CarteAction;
 
 import java.util.ArrayList;
 /**
- * Created by jrfoehn on 11/29/16.
+ * Classe abstraite permettant d'avoir des méthodes communes.
  */
 public abstract class TasDeCarte {
 
@@ -13,11 +13,10 @@ public abstract class TasDeCarte {
 
     public TasDeCarte() {
         this.listeCartes = new ArrayList<CarteAction>();
-        this.estVide = false;
+        this.estVide = true;
     }
 
-    public CarteAction choisirCarte(int i) {
-        return this.listeCartes.get(i);
+    public ArrayList<CarteAction> getListeCartes() {
+        return listeCartes;
     }
-
 }

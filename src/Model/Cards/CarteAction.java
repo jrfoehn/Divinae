@@ -3,20 +3,27 @@ package model.cards;
 import model.components.Origine;
 
 /**
- * Created by jrfoehn on 11/29/16.
+ * Classe modélisant les cartes d'action
  */
-public class CarteAction extends Carte {
+public abstract class CarteAction extends Carte {
 
-    protected int idCapaciteSpeciale;
     protected int idCarte;
+    protected int idCapaciteSpeciale;
+    protected boolean defausser = true;
+    protected boolean capaciteUtilisable = true;
+    protected TypeCarte typeCarte;
 
-    public CarteAction(String nom, Origine origine, int idCapaciteSpeciale, int idCarte) {
-        super(nom, origine);
-    }
+    /**
+     * Constructeur carte action
+     * @param nom String
+     * @param origine Origine
+     * @param typeCarte TypeCarte
+     * @param idCapaciteSpeciale int
+     * @param idCarte int
+     */
+    public CarteAction(String nom, Origine origine, TypeCarte typeCarte, int idCapaciteSpeciale, int idCarte) {
+        super(nom, origine, typeCarte);
 
-    @Override
-    public String toString(){
-        return super.toString();
     }
 
     /*Liste des getters / setters*/
@@ -27,6 +34,27 @@ public class CarteAction extends Carte {
 
     public int getIdCapaciteSpeciale() {
         return this.idCapaciteSpeciale;
+    }
+
+    public boolean getDefausser() {
+        return this.defausser;
+    }
+
+    public void setDefausser(boolean defausser) {
+        this.defausser = defausser;
+    }
+
+    public boolean getCapaciteUtilisable() {
+        return capaciteUtilisable;
+    }
+
+    public void setCapaciteUtilisee(boolean capaciteUtilisable) {
+        this.capaciteUtilisable = capaciteUtilisable;
+    }
+
+    @Override
+    public String toString(){
+        return super.toString();
     }
 
 }

@@ -1,3 +1,12 @@
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+import model.components.plateau.*;
 import model.kernel.Partie;
 
 import java.util.Scanner;
@@ -5,7 +14,10 @@ import java.util.Scanner;
 /**
  * Created by jrfoehn on 12/1/16.
  */
-public class Main {
+public class Main extends Application {
+    private Stage stage;
+    private BorderPane mainPane;
+//    private WelcomePane welcomePane;
 
     public static void main(String[] args){
 
@@ -31,7 +43,34 @@ public class Main {
         }
 
         Partie partie = Partie.parametrerPartie(humain, virtuel);
+        partie.attribuerDivinite();
+        Pioche.getInstance().initialiserCartes();
+        Defausse.getInstance();
+        Deck.getInstance();
+        Plateau.getInstance();
+        PlateauPerso.getInstance();
+        partie.commencerPartie();
+        while (!Partie.getInstance().getFin()) {
+            partie.tourSuivant();
+        }
+    }
 
+//    public static void main(String[] args) {
+//        launch(args);
+//    }
+
+    @Override
+    public void init() throws Exception {
+        super.init();
+    }
+
+    @Override
+    public void stop() throws Exception {
+        super.stop();
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
 
     }
 }

@@ -1,12 +1,11 @@
-package model.components;
+package model.components.plateau;
 
 import model.cards.CarteAction;
 
-import java.util.ArrayList;
-
 /**
- * Created by jrfoehn on 11/29/16.
+ * Main du joueur.
  */
+
 public class Deck  extends TasDeCarte {
 
     private static Deck instance;
@@ -15,13 +14,15 @@ public class Deck  extends TasDeCarte {
         super();
     }
 
-//    public static
-
     public static Deck getInstance() {
         if (instance == null) {
             instance = new Deck();
         }
         return instance;
+    }
+
+    public CarteAction choisirCarte(int i) {
+        return this.listeCartes.get(i);
     }
 
 }
